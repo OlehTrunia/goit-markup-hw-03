@@ -14,6 +14,7 @@ font-size: 26px;
 line-height: 0.83;  
 letter-spacing: 0.03em;
 color: var(--accent-color);
+padding-left: 15px;
 }
 
 .header{
@@ -44,7 +45,7 @@ display: inline;
 
 .header .logo-studio{
 color: var(--studio-color);
-padding-left: 15px;
+/* padding-left: 15px; */
 }
 footer .logo-studio{
 color: var(--title-text-color);
@@ -87,28 +88,41 @@ color: var(--referent-text-color);
 /*-------------------------------------HERO---------------------------*/
 .hero{
 background-color: var(--hero-background-color);
+width: 1600px;
+height: 600px;
 }
 .hero-title{
+display: flex;
+padding-top: 200px;
+justify-content: center;
+white-space: wrap;
+
 font-weight: 900;
 font-size: 44px;
 line-height: 1.36;
-text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 color: var(--title-text-color);
+
 }
 .hero-btn{
+display: block;
+justify-content: center;
+margin: 30px 692px ;
+/* outline: 3px dotted red; */
+
 background: var(--accent-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
+border-color: var(--accent-color);
 color: var(--title-text-color);
 font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
-display: flex;
-align-items: center;
-text-align: center;
 letter-spacing: 0.06em;
+width: 216px;
+height: 50px;
+align-items: center; 
 }
 .body button{
 cursor: pointer;
@@ -125,6 +139,11 @@ cursor: pointer;
     overflow: hidden;
 }
 /*--------------------------SCILLS-------------------------------*/
+.container.scills{
+    display: inline-flex;
+    justify-content: center;
+}
+
 .scills{
 background-color: var(--title-text-color);
 }
@@ -190,20 +209,20 @@ left: 0px;
 top: 1628px;
 }
 .footer-container .link{
-    display: flex;
-    margin-left: 215px;
-    font-size: 14px;
+display: flex;
+padding-left: 215px;
+font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--title-text-color);
 }
 .footer-list.list{
-    display: block;
+display: block;
 margin: 0;
 padding: 0;
 }
 .footer-container .logo-web{
-    font-family: Raleway, sans-serif;
+font-family: Raleway, sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 0.83;  
@@ -212,15 +231,14 @@ color: var(--accent-color);
 margin-top: 60px;
 }
 .footer-link:first-child{
-    padding-top: 20px;
+padding-top: 20px;
 }
 .footer-link:nth-child(n + 2) {
-    padding-top: 9px;
-  } 
+padding-top: 9px;
+} 
 .footer-link:last-child{
 padding-bottom: 60px;
 } 
-
 .footer-link.adress{
 opacity: 60%;
 }
@@ -233,7 +251,6 @@ main{
 background-color: var(--title-text-color);
 width: 1170px;
 margin: 0 auto;
-outline: 2px solid orange;
 }
 .navigation-list{
     display: flex;
