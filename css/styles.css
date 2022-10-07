@@ -1,6 +1,6 @@
 *,
-*::before,
-*::after {
+*:before,
+*:after {
 box-sizing: border-box;
 }
 :root{
@@ -25,47 +25,6 @@ ul, ol{
 margin: 0;
 padding-left: 0;
 }
-.logo-web{
-font-family: Raleway, sans-serif;
-font-weight: 700;
-font-size: 26px;
-line-height: 0.83;  
-letter-spacing: 0.03em;
-color: var(--accent-color);
-padding-left: 15px;
-}
-
-.container {
-width: 1200px;
-padding-left: 15px;
-padding-right: 15px;
-margin: 0 auto;
-}
-.header {
-background-color: gray;
-padding-top: 32px;
-padding-bottom: 32px;
-}
-li.header-item{
-display: inline;
-}
-.referents{
-display: flex;
-margin-left: auto;
-padding-right: 15px;
-}
-.referents .link + .link{
-margin-left: 50px;
-}
-.header-item .link + .link{
-margin-left: 10px;
-}
-.header .logo-studio{
-color: var(--studio-color);
-}
-footer .logo-studio{
-color: var(--title-text-color);
-}
 body{
 font-family: 'Roboto', sans-serif;
 background-color: var(--title-text-color);
@@ -78,6 +37,42 @@ list-style: none;
 .link{
 text-decoration: none;
 }
+.logo-web{
+font-family: Raleway, sans-serif;
+font-weight: 700;
+font-size: 26px;
+line-height: 0.83;  
+letter-spacing: 0.03em;
+color: var(--accent-color);
+padding-left: 15px;
+}
+.container {
+width: 1200px;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
+text-align: center;
+}
+.header .container {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+padding-top: 24px;
+}
+.header-item .link + .link{
+margin-left: 10px;
+}
+.header .site-logo{
+padding-top: 0;
+
+}
+.header .logo-studio{
+color: var(--studio-color);
+}
+footer .logo-studio{
+color: var(--title-text-color);
+}
+
 .header-item .link{
 font-weight: 500;
 font-size: 14px;
@@ -85,7 +80,9 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--primary-text-color);    
 }
-
+/* .container > .header-list{
+display: block;
+} */
 .link:hover,
 .link:focus{
 color: var(--accent-color);
@@ -100,15 +97,21 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--referent-text-color);
 }  
+.referents .link:not(:last-child){
+margin-right: 50px;
+}
 /*-------------------------------------HERO---------------------------*/
 .hero{
 background-color: var(--hero-background-color);
 width: 1200px;
 }
-.hero-title{
+.hero .container{
 display: flex;
-padding-top: 200px;
 justify-content: center;
+}
+.hero-title{
+padding-top: 200px;
+padding-bottom: 30px;
 
 font-weight: 900;
 font-size: 44px;
@@ -119,10 +122,7 @@ color: var(--title-text-color);
 }
 .hero-btn{
 display: block;
-margin-top: 30px;
-/* justify-content: center; ---------????*/
-align-items: center;
-
+margin: 0 auto;
 background: var(--accent-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
@@ -134,6 +134,8 @@ line-height: 1.88;
 letter-spacing: 0.06em;
 width: 216px;
 height: 50px;
+padding-top: 30px;
+padding-bottom: 200px;
 }
 .body button{
 cursor: pointer;
@@ -151,11 +153,14 @@ overflow: hidden;
 }
 /*--------------------------SCILLS-------------------------------*/
 .scills .container{
-display: flex;
-justify-content: center;
-gap: 5px;
 }
-.scills-cont{/* display: block; */margin-bottom: 94px;margin-top: 94px;
+.scills-list{
+    display: flex;
+    margin:0 auto;
+    gap: 30px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
 }
 .scills{
 background-color: var(--title-text-color);
@@ -169,6 +174,8 @@ text-transform: uppercase;
 color: var(--primary-text-color);
 }
 .scills-item{
+/* display: block */
+justify-content: center;
 font-weight: 400; 
 font-size: 14px; 
 line-height: 1.71; 
@@ -180,33 +187,41 @@ margin-top: 10px;
 .work{
 background-color: var(--title-text-color);
 }
+.work-list{
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+}
 .work-title{
-font-style: normal;
+  font-style: normal;
 font-weight: 700;
 font-size: 36px;
 line-height: 1.16;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
-margin-bottom: 50px;
-/* margin-left: auto;
-margin-right: auto; -------------???????*/
-}
-.work .container{
-/* display: flex; */
-/* justify-content: center; */
+padding-bottom: 50px;
 }
 /*----------------------------SPECIALISTS-------------------------------*/
-.specialists{
+.specialists .container{
 background: var(--scills-text-color);
+/* justify-content: center; */
+}
+.specialists-list{
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+    /* margin-top: 34px; */
+    /* padding: 20px; */
 }
 .specialists-title{
+    display: block;
 font-weight: 700;
 font-size: 36px;
 line-height: 1.16;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
-margin-top: 94px;
-margin-bottom: 50px;
+padding-top: 94px;
+padding-bottom: 50px;
 }
 .spec-info{
 margin-top: 30px; 
@@ -229,15 +244,18 @@ color: var(--referent-text-color);
 }
 /*----------------------FOOTER------------------------------*/
 footer.container{
-display: flex;
-min-width: 1600px;
+width: 100%;
 background-color: var(--hero-background-color);
-justify-content: start;
-left: 0px;
-top: 1628px;
+
 }
-.footer-container .link{
+.footer-container{
 display: flex;
+margin: 0 auto;
+justify-content: start;
+padding: 0;
+width: 1200px;}
+
+.footer-container .link{
 padding-left: 215px;
 font-size: 14px;
 line-height: 1.71;
@@ -285,8 +303,8 @@ display: flex;
 justify-content: center;
 margin-top: 94px;
 }
-.navigation-item + .navigation-item{
-margin-left: 8px;
+.navigation-item:not(:last-child){
+margin-right: 8px;
 }
 .superhero-list{
 display: flex;
