@@ -55,16 +55,16 @@ text-align: center;
 }
 .header .container {
 display: flex;
-justify-content: space-between;
-flex-direction: row;
+justify-content: flex-start;
+align-items: center;
 padding-top: 24px;
+padding-bottom: 24px;
 }
 .header-item .link + .link{
 margin-left: 10px;
 }
-.header .site-logo{
+.header .logo-web.link{
 padding-top: 0;
-
 }
 .header .logo-studio{
 color: var(--studio-color);
@@ -80,15 +80,26 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--primary-text-color);    
 }
-/* .container > .header-list{
-display: block;
-} */
+.header-list{
+    display: flex;
+    margin-right: auto;
+    justify-content: flex-start;
+}
+.list .header-item:not(:last-child){
+padding-right: 50px;
+}
+.list .header-item:first-child{
+    padding-left: 94px;
+}
 .link:hover,
 .link:focus{
 color: var(--accent-color);
 }
 a.link.current{
 color: var(--accent-color);
+}
+.container .referents{
+    margin-left: auto;
 }
 .referents-link{
 font-weight: 500;
@@ -98,7 +109,7 @@ letter-spacing: 0.02em;
 color: var(--referent-text-color);
 }  
 .referents .link:not(:last-child){
-margin-right: 50px;
+padding-right: 50px;
 }
 /*-------------------------------------HERO---------------------------*/
 .hero{
@@ -108,6 +119,7 @@ width: 1200px;
 .hero .container{
 display: flex;
 justify-content: center;
+padding-bottom: 200px;
 }
 .hero-title{
 padding-top: 200px;
@@ -135,7 +147,7 @@ letter-spacing: 0.06em;
 width: 216px;
 height: 50px;
 padding-top: 30px;
-padding-bottom: 200px;
+/* padding-bottom: 200px; */
 }
 .body button{
 cursor: pointer;
@@ -256,14 +268,15 @@ padding: 0;
 width: 1200px;}
 
 .footer-container .link{
-padding-left: 215px;
+padding-top: 60px;
+padding-bottom: 20px;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--title-text-color);
 }
 .footer-list.list{
-display: block;
+display: flex;
 margin: 0;
 padding: 0;
 }
@@ -274,7 +287,7 @@ font-size: 26px;
 line-height: 0.83;  
 letter-spacing: 0.03em;
 color: var(--accent-color);
-margin-top: 60px;
+
 }
 .footer-link:first-child{
 padding-top: 20px;
