@@ -12,6 +12,13 @@ box-sizing: border-box;
 --scills-text-color: #F5F4FA;
 --hero-background-color: #2F303A;
 }
+body{
+font-family: 'Roboto', sans-serif;
+background-color: var(--title-text-color);
+font-size: 14px;
+letter-spacing: 0.03em;
+}
+
 p,
 h1,
 h2,
@@ -25,17 +32,33 @@ ul, ol{
 margin: 0;
 padding-left: 0;
 }
-body{
-font-family: 'Roboto', sans-serif;
-background-color: var(--title-text-color);
-font-size: 14px;
-letter-spacing: 0.03em;
+img{
+display: block;
+max-width: 100%;
+height: auto;
 }
+adress{
+font-style: normal;
+}
+button{
+display: block;
+cursor: pointer;
+border: none;
+border-radius: 4px;
+}
+.section{
+padding-top: 94px;
+padding-bottom: 94px;
+}
+
 .list{
 list-style: none;
+padding-left: 0;
+margin: 0;
 }
 .link{
 text-decoration: none;
+color: inherit;
 }
 .logo-web{
 font-family: Raleway, sans-serif;
@@ -47,16 +70,15 @@ color: var(--accent-color);
 }
 .container {
 width: 1200px;
-padding-left: 15px;
-padding-right: 15px;
 margin: 0 auto;
+padding: 0 15px;
 }
 .header .container {
 display: flex;
-justify-content: flex-start;
+/* justify-content: flex-start; */
 align-items: center;
-padding-top: 24px;
-padding-bottom: 24px;
+/* padding-top: 24px;
+padding-bottom: 24px; */
 }
 .header-item .link + .link{
 margin-left: 10px;
@@ -76,18 +98,24 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--primary-text-color);    
+padding: 32px 0;
+display: block;
 }
 .header-list{
 display: flex;
-margin-right: auto;
-justify-content: flex-start;
+/* margin-right: auto; */
+/* justify-content: flex-start; */
+gap: 50px;
 }
-.list .header-item:not(:last-child){
+nav{
+margin-left: 93px;
+}
+/* .list .header-item:not(:last-child){
 padding-right: 50px;
 }
 .list .header-item:first-child{
 padding-left: 94px;
-}
+} */
 .link:hover,
 .link:focus{
 color: var(--accent-color);
@@ -106,12 +134,14 @@ letter-spacing: 0.02em;
 color: var(--referent-text-color);
 }  
 .referents .link:not(:last-child){
-padding-right: 50px;
+margin-right: 50px;
 }
 /*-------------------------------------HERO---------------------------*/
 .hero{
 background-color: var(--hero-background-color);
-width: 1200px;
+/* width: 1200px; */
+padding: 200px 0;
+text-align: center;
 }
 .hero .container{
 text-align: center; 
@@ -120,8 +150,8 @@ padding-bottom: 200px;
 .hero-title{
 margin: 0 auto;
 width: 696px;
-padding-top: 200px;
-padding-bottom: 30px;
+/* padding-top: 200px; */
+margin-bottom: 30px;
 
 font-weight: 900;
 font-size: 44px;
@@ -140,8 +170,11 @@ font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.06em;
-width: 216px;
+min-width: 216px;
+margin: 0 auto;
 cursor: pointer;
+border: none;
+padding: 10px 32px;
 }
 .visually-hidden{
 position: absolute;
@@ -157,13 +190,13 @@ overflow: hidden;
 /*--------------------------SCILLS-------------------------------*/
 .scills-list{
 display: flex;
-margin:0 auto;
+/* margin:0 auto; */
 gap: 30px;
-padding-top: 94px;
-padding-bottom: 94px;
+/* padding-top: 94px;
+padding-bottom: 94px; */
 }
 .scills{
-background-color: var(--title-text-color);
+padding: 94px 0;
 }
 .scills-title{
 font-weight: 700;
@@ -184,13 +217,14 @@ margin-top: 10px;
 }
 /*-----------------------WORK---------------------------*/
 .work{
-background-color: var(--title-text-color);
+/* background-color: var(--title-text-color); */
+padding-top: 0;
 }
 .work-list{
 display: flex;
 flex-wrap: wrap;
 gap: 30px;
-margin-bottom: 94px;
+/* margin-bottom: 94px; */
 }
 .work-title{
 text-align: center; 
@@ -200,11 +234,12 @@ font-size: 36px;
 line-height: 1.16;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
-padding-bottom: 50px;
+margin-bottom: 50px;
 }
 /*----------------------------SPECIALISTS-------------------------------*/
-.specialists .container{
+.specialists{
 background: var(--scills-text-color);
+padding: 94px 0;
 }
 .specialists-list{
 display: flex;
@@ -219,12 +254,16 @@ font-size: 36px;
 line-height: 1.16;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
-padding-top: 94px;
-padding-bottom: 50px;
+margin-bottom: 50px;
+}
+.spec-item{
+background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 }
 .spec-info{
-margin-top: 30px; 
-margin-bottom: 30px;  
+padding: 30px 0;
+text-align: center;  
 }
 .specialists-name{
 font-weight: 500;
@@ -242,57 +281,50 @@ letter-spacing: 0.03em;
 color: var(--referent-text-color);
 }
 /*----------------------FOOTER------------------------------*/
-footer.container{
-width: 100%;
+.footer{
+padding: 60px 0;
 background-color: var(--hero-background-color);
-
 }
-.footer-container{
+.container{
 display: flex;
 margin: 0 auto;
-padding: 0 15px;
-width: 1200px;}
-.footer-container > .adress{
-text-align: 0;
-align-items: flex-start;
-margin-top: 60px;
+/* padding: 0 15px; */
+width: 1200px;
 }
-.footer-container .adress{
-padding-top: 9px;
+.footer-list{
+    margin-top: 20px;
 }
-.footer-container .link{
+.footer-list .link{
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 color: var(--title-text-color);
+gap: 9px;
 }
-.footer-container .logo-web{
+.container .logo-web{
 font-family: Raleway, sans-serif;
 font-weight: 700;
 font-size: 26px;
 line-height: 0.83;  
 letter-spacing: 0.03em;
 color: var(--accent-color);
+
 }
-.footer-link:first-child{
-padding-top: 20px;
-}
-.footer-link:last-child{
-padding-bottom: 60px;
-} 
 .footer-link.adress{
 opacity: 60%;
+font-style: normal;
+padding-top: 9px;
 }
 /*----------------------------------PORTFOLIO--------------------*/
 .navigation,
 .superhero{
 background-color: var(--title-text-color);
 }
-main{
+/* main{
 background-color: var(--title-text-color);
 width: 1170px;
 margin: 0 auto;
-}
+} */
 .navigation-list{
 display: flex;
 justify-content: center;
