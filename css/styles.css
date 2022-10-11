@@ -265,10 +265,11 @@ display: block;
 padding: 60px 0;
 background-color: var(--hero-background-color);
 }
-.adress .footer-list{
-margin-top: 20px;
+.adress{
+font-style: normal;
 }
 .footer-list .footer-link{
+margin-top: 20px;   
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
@@ -277,19 +278,16 @@ color: var(--title-text-color);
 }
 .footer-list .footer-link:not(:first-child){
 opacity: 60%;
-font-style: normal;
 margin-top: 9px;
 }
 /*----------------------------------PORTFOLIO--------------------*/
 .header{
 border-bottom: 1px solid #ECECEC;
 }
-.superhero.navigation .container {
-margin-top: 94px;
-margin-bottom: 94px;
-}
 .superhero.navigation{
 background-color: var(--title-text-color);
+padding-top: 94px;
+padding-bottom: 94px;
 }
 .navigation-list{
 display: flex;
@@ -301,12 +299,7 @@ margin-right: 8px;
 }
 .superhero-item{
     width: 370px;
-    height: 404px;
-    left: 215px;
-    top: 1130px;
-    
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
+   
 }
 .superhero-list{
 display: flex;
@@ -322,7 +315,7 @@ letter-spacing: 0.06em;
 color: var(--primary-text-color);
 }
 .superhero-box{
-margin: 20px 24px;
+padding: 20px 24px;
 }
 .superhero-title{
 margin-bottom: 4px;
@@ -347,11 +340,7 @@ color: var(--primary-text-color);
 background-color: var(--scills-text-color);
 border-radius: 4px;
 border-style: none; 
-width: 125px;
-height: 38px;
-left: 593px;
-top: 174px;
-
+padding: 6px 22px;
 }
 .navigation-btn:hover,
 .navigation-btn:focus{
